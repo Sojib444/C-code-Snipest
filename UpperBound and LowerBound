@@ -1,0 +1,22 @@
+int searchInsert(vector<int>& v, int k) {
+
+        int L=0;
+        int H=v.size()-1;
+        while(L<=H)
+        {
+           long long mid=L+(H-L)/2;
+            if(v[mid]==k)
+            {
+                return mid;
+            }
+            if(v[mid]>k)
+            {
+                H=mid-1;
+            }
+            else
+                L=mid+1;
+        }
+        return L;
+
+
+    }
